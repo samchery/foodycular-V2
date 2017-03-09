@@ -1,0 +1,1072 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Economica:400,700|Raleway:400,600,700');
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+a,
+a:hover,
+a:link,
+a:active {
+    text-decoration: none;
+}
+
+
+/* HEADER */
+
+header {
+    position: relative;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4) url('../img-layout/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 800%;
+    font-weight: 600;
+    font-family: 'Economica';
+    text-align: center;
+    padding-top: 20vh;
+}
+
+h1 img {
+    width: 20%;
+    max-width: 180px;
+    vertical-align: bottom;
+}
+
+header h2 {
+    width: 55%;
+    margin-left: 45%;
+    color: #fff;
+    font-size: 300%;
+    font-weight: 400;
+    font-family: 'Economica';
+}
+
+header h2 span {
+    color: #EE478D;
+    font-style: italic;
+}
+
+
+/* nav */
+
+nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 175px;
+}
+
+nav ul {
+    margin: 0 1%;
+}
+
+nav ul li {
+    position: relative;
+    list-style: none;
+    width: 33%;
+    height: 150px;
+    float: left;
+}
+
+nav ul li a {
+    color: white;
+}
+
+nav ul li a p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* couleur de navigation en fonction de la section */
+
+nav ul li.highlight_a a {
+    color: #ee498e;
+}
+
+nav ul li.highlight_a2 a {
+    color: #43bc9d;
+}
+
+nav ul li.highlight_a3 a {
+    color: #f05042;
+}
+
+
+/* style de la nav quand position fixe */
+
+nav.fixe {
+    background: black;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    height: 40px;
+}
+
+nav.fixe ul li a img {
+    display: none;
+}
+
+nav.fixe ul li {
+    height: 25px;
+    background: black;
+    padding: 5px 0;
+}
+
+nav.fixe ul li a p {
+    bottom: 5px;
+}
+
+
+/* icones & animation */
+
+.molecul-pink {
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    animation-duration: 1s;
+    animation-name: boom;
+    transition-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes boom {
+    from {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+    to {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+.gear {
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.small-gear-green {
+    width: 40px;
+    height: 40px;
+    animation-duration: 10s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.big-gear-green {
+    width: 55px;
+    height: 55px;
+    position: relative;
+    left: 17px;
+    top: -11px;
+    animation-duration: 10s;
+    animation-name: rotatebis;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotatebis {
+    from {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+.flask-orange {
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    animation-duration: 1.5s;
+    animation-name: boom;
+    transition-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/* SECTION 1 || DESCRIPTION */
+
+.description {
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wrapper-imgG {
+    width: 55%;
+    -webkit-transform: skew(-20deg, 0deg);
+    -ms-transform: skew(-20deg, 0deg);
+    -o-transform: skew(-20deg, 0deg);
+    transform: skew(-20deg, 0deg);
+    overflow: hidden;
+    margin-left: -200px;
+    background: url(../img-layout/cat1_contenu1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper-imgD {
+    width: 55%;
+    -webkit-transform: skew(-20deg, 0deg);
+    -ms-transform: skew(-20deg, 0deg);
+    -o-transform: skew(-20deg, 0deg);
+    transform: skew(-20deg, 0deg);
+    overflow: hidden;
+    margin-right: -200px;
+    background: url(../img-layout/cat1_contenu2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper-imgD img {
+    -webkit-transform: skew(20deg, 0deg);
+    -ms-transform: skew(20deg, 0deg);
+    -o-transform: skew(20deg, 0deg);
+    transform: skew(20deg, 0deg);
+    height: 100%;
+}
+
+.wrapper-content {
+    width: 42%;
+}
+
+.wrapper-content p.AlG {
+    width: 75%;
+    margin: 8% 0 8% 20%;
+    line-height: 26px;
+    text-align: right;
+}
+
+.wrapper-content p.AlD {
+    width: 80%;
+    margin: 6% 10% 4% 0%;
+    line-height: 26px;
+    text-align: left;
+}
+
+.description h2 {
+    font-size: 50px;
+    font-weight: 400;
+    font-family: 'Economica';
+    color: #EE478D;
+    padding: 50px 0 0 20px;
+}
+
+.alignementD {
+    text-align: right;
+    margin-right: -100px;
+}
+
+.wrapper-nav {
+    width: 3%;
+    padding: 100px 1% 0 1%;
+    font-size: 22px;
+    text-align: center;
+}
+
+.wrapper-nav a {
+    margin: 5px 0;
+    text-decoration: none;
+    display: block;
+    color: #bbb;
+}
+
+.wrapper-nav a:nth-child(1) {
+    margin-top: 15vh;
+}
+
+.description .highlight {
+    color: #EE478D;
+}
+
+.wrapper-nav img {
+    width: 100%;
+    display: block;
+}
+
+a.position {
+    color: #EE478D;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+
+/* SECTION 2 || TECHNIQUES */
+
+.techniques {
+    display: none;
+}
+
+
+/*navigation entre différentes techniques*/
+
+.navigation_intern {
+    margin: 20px 0 50px 0;
+}
+
+.navigation_intern ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.navigation_intern ul li {
+    padding: 10px;
+    margin: 5px;
+    background: #03CEA4;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+.navigation_intern ul li p:hover {
+    border-bottom: 1px solid #fff;
+}
+
+
+/* pour les techniques*/
+
+.tech {
+    padding: 20px 0;
+    display: none;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.active {
+    display: block;
+}
+
+.tech h2 {
+    float: left;
+    text-transform: uppercase;
+    color: #03CEA4;
+    font-family: 'Economica', sans-serif;
+    font-size: 140px;
+    font-weight: bold;
+    width: 50%;
+    padding-left: 8%;
+}
+
+
+/*degrade des couleurs du titre*/
+
+.top {
+    opacity: .33;
+}
+
+.mid {
+    opacity: .66;
+}
+
+.bot {
+    opacity: 1;
+}
+
+
+/* texte intro*/
+
+.text_intro {
+    width: 50%;
+    float: right;
+    padding-left: 5%;
+    margin-top: 25px;
+}
+
+.text_intro h3 {
+    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    color: #03CEA4;
+    border-bottom: 1px solid #03CEA4;
+    width: 80%;
+}
+
+.text_intro p {
+    padding: 0;
+    margin: 50px 0;
+    line-height: 35px;
+    font-size: 18px;
+    width: 70%;
+    line-height: 26px;
+}
+
+
+/* info suivantes */
+
+.info {
+    margin: 10px auto 30px auto;
+    width: 80%;
+    line-height: 30px;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* 2em type info */
+
+.info2 {
+    height: 150px;
+    margin-bottom: 70px;
+}
+
+.info2 img {
+    height: 150px;
+    float: right;
+    display: block;
+}
+
+.info2 p {
+    float: left;
+    background-color: #03CEA4;
+    display: inline-block;
+    padding: 2%;
+    width: 50%;
+    height: 150px;
+    box-sizing: border-box;
+}
+
+.en_relief {
+    font-weight: bold;
+}
+
+
+/* liste des sous-types */
+
+.detail {
+    margin-left: 15%;
+    width: 70%;
+    margin-bottom: 40px;
+}
+
+.num_detail {
+    width: 8%;
+    text-align: center;
+    font-size: 74px;
+    font-family: 'Economica', sans-serif;
+    font-weight: bold;
+    color: #03CEA4;
+    float: left;
+}
+
+.text_detail {
+    padding: 2%;
+    line-height: 30px;
+    text-align: left;
+}
+
+
+/* tableau periodique element */
+
+.bordure_sep {
+    height: 1px;
+    background: #03CEA4;
+}
+
+.elem {
+    text-align: center;
+    margin: 0 auto;
+    width: 25%;
+    margin-top: -18px;
+    z-index: 2;
+    background: white;
+    font-family: 'Economica', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #03CEA4;
+    margin-bottom: 25px;
+}
+
+.bloc_ingredient {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.bloc_contour {
+    float: left;
+    width: 180px;
+    height: 200px;
+    background: black;
+    margin: 15px;
+}
+
+.bloc_int {
+    width: 140px;
+    height: 130px;
+    margin: 10px auto;
+    background: #03CEA4;
+    color: white;
+    padding-top: 30px;
+}
+
+.titreIng {
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sstIng {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 11px;
+}
+
+.info_elem {
+    color: black;
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 70%;
+    max-height: 200px;
+    overflow: auto;
+}
+
+
+/* SECTION 3 || RECETTES */
+
+.recipes {
+    display: none;
+}
+
+.container-recipes h3 {
+    margin-bottom: 30px;
+    color: #fb4d3d;
+    margin-top: 30px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.container-recipes h4 {
+    color: #fb4d3d;
+    margin-bottom: 80px;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+/* filtrer les recettes */
+
+.galery {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.col-elem {
+    float: left;
+    width: 29%;
+    margin: 2%;
+}
+
+.element-item {
+    width: 100%;
+    float: left;
+    position: relative;
+    vertical-align: top;
+    transition-duration: 0.6s;
+    background: #000;
+    margin-bottom: 20px;
+}
+
+.element-item img {
+    display: block;
+    width: 100%;
+    opacity: 0.4;
+    transition-duration: 0.7s;
+    animation-duration: 0.7s;
+}
+
+.element-item:hover img {
+    opacity: 0.9;
+    transition-duration: 0.7s;
+    animation-duration: 0.7s;
+}
+
+.element-item a {
+    position: absolute;
+    bottom: 10%;
+    width: 60%;
+    left: 50%;
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 8px 16px;
+    -webkit-transform: translateX(-48%);
+    -ms-transform: translateX(-48%);
+    -o-transform: translateX(-48%);
+    transform: translateX(-48%);
+    color: #fff;
+}
+
+.element-item p {
+    position: absolute;
+    top: 35%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    transition-duration: 0.7s;
+    animation-duration: 0.7s;
+}
+
+.element-item:hover p {
+    display: none;
+    transition-duration: 0.7s;
+    animation-duration: 0.7s;
+}
+
+
+/* DESIGN PAGE RECETTE */
+
+.la-recette {
+    padding-bottom: 50px;
+}
+
+.la-recette h3 {
+    margin: 50px 0 50px;
+    color: #FB4D3D;
+    font-size: 40px;
+    text-align: center;
+}
+
+.la-recette h3 img {
+    display: none;
+}
+
+.nav-recette {
+    width: 100%;
+    background: #FB4D3D;
+    height: 65px;
+    margin-bottom: 50px;
+    padding-top: 35px;
+}
+
+.nav-recette ul {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav-recette ul li {
+    float: left;
+    font-size: 22px;
+    color: #fff;
+    width: 33%;
+    list-style: none;
+}
+
+.nav-recette ul li img {
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.wrapp-la-recette {
+    margin: 10px auto;
+    width: 80%;
+    padding: 30px 0;
+}
+
+
+/* partie gauche ingredients...*/
+
+.partie-G {
+    width: 45%;
+    margin-right: 5%;
+    float: left;
+    padding: 30px 0;
+}
+
+.partie-G .contour {
+    border-top: 1px solid #FB4D3D;
+    padding: 35px 0;
+}
+
+.wrapp-la-recette .partie-G h5 {
+    font-size: 40px;
+    width: 180px;
+    text-align: right;
+    float: right;
+    background: #fff;
+    margin-top: -65px;
+    font-family: 'Economica';
+}
+
+.wrapp-la-recette ul li {
+    list-style: none;
+}
+
+.wrapp-la-recette .elements {
+    line-height: 80px;
+    width: 80px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    background: #1a237e;
+    float: right;
+}
+
+.wrapp-la-recette .elements p {
+    text-align: center;
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    font-size: 10px;
+    font-weight: lighter;
+    width: 80px;
+}
+
+
+/* partie droite image...*/
+
+.partie-D {
+    width: 50%;
+    float: right;
+}
+
+.partie-D img {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* etape de la recette */
+
+.contour-prepa {
+    border-top: 1px solid #FB4D3D;
+}
+
+.preparation {
+    font-size: 40px;
+    width: 180px;
+    font-family: 'Economica';
+    margin-bottom: 50px;
+    margin-top: -60px;
+    background: #fff;
+}
+
+ol {
+    line-height: 24px;
+    margin-left: 50px;
+    counter-reset: repas;
+}
+
+ol li {
+    list-style-type: none;
+    counter-increment: repas;
+    margin-bottom: 10px;
+}
+
+ol li:before {
+    content: counter(repas);
+    font-size: 34px;
+    vertical-align: top;
+    font-weight: bold;
+    margin-right: 15px;
+    line-height: 14px;
+}
+
+
+/* --- FOOTER --- */
+
+footer {
+    padding: 1%;
+    background: #000;
+    color: #fff;
+}
+
+footer p {
+    font-size: 11px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* ------------ RESPONSIVE ------------ */
+
+@media screen and (max-width: 1220px) {
+    .tech {
+        width: auto;
+        padding: 15px;
+    }
+    .bloc_ingredient {
+        width: auto;
+    }
+}
+
+@media screen and (max-width:1010px) {
+    /* section 2 - techniques */
+    .info2 {
+        height: auto;
+        margin: 20px auto;
+        width: 80%;
+    }
+    .info2 img {
+        display: none;
+    }
+    .info2 p {
+        background: none;
+        display: block;
+        padding: 0;
+        height: auto;
+        line-height: 30px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width:900px) {
+    /* header */
+    h1 {
+        padding-top: 30vh;
+        font-size: 500%;
+    }
+    h1 img {
+        width: 15%;
+    }
+    header h2 {
+        font-size: 250%;
+    }
+    /* ajustement section 1*/
+    .wrapper {
+        height: auto;
+    }
+    .wrapper-imgG,
+    .wrapper-imgD {
+        display: none;
+    }
+    .wrapper-content {
+        width: auto;
+    }
+    .wrapper-content h2 {
+        text-align: center;
+        font-size: 45px;
+    }
+    .wrapper-content p.AlG {
+        width: 80%;
+        margin: 8% 10%;
+        text-align: left;
+    }
+    .alignementD {
+        text-align: left;
+        margin-right: 0;
+    }
+    .wrapper-content p.AlD {
+        width: 80%;
+        margin: 8% 10%;
+    }
+    .wrapper-nav {
+        display: none;
+    }
+    /* section 2 - techniques */
+    .top,
+    .mid,
+    .bot {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+    .tech h2 {
+        float: none;
+        width: 100%;
+        text-align: center;
+        font-size: 90px;
+    }
+    .text_intro {
+        width: auto;
+        float: none;
+    }
+    .text_intro h3 {
+        width: 80%;
+    }
+    .text_intro p,
+    .info2 p,
+    .info {
+        width: auto;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 0 15px;
+    }
+    .info2 {
+        width: auto;
+    }
+    .detail {
+        margin: 10px 7%;
+        width: 86%;
+    }
+    .last_det {
+        margin-bottom: 50px;
+    }
+    .info_elem {
+        width: 60%;
+    }
+    /* section 3 - filtre des recettes en lignes */
+    .container-recipes h3 {
+        font-size: 35px;
+    }
+    .container-recipes h4 {
+        font-size: 25px;
+    }
+    .container-recipes ul li {
+        width: 100%;
+        margin: 5% auto;
+        display: block;
+    }
+    .elem {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 img {
+        display: block;
+        margin: 0 auto;
+        min-width: 150px;
+    }
+    header h2 {
+        display: none;
+    }
+    /* section 2 - technos */
+    .text_intro h3 {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 30px;
+    }
+    .bloc_contour {
+        float: none;
+        margin: 10px auto;
+        padding-top: 10px;
+    }
+    .info_elem {
+        float: none;
+        margin: 15px auto;
+        width: 90%;
+        max-height: none;
+    }
+    /*  recette affichée en ligne */
+    .col-elem {
+        float: none;
+        width: 98%;
+        margin: 2%;
+    }
+    /* réarange la page affichant les recettes */
+    .nav-recette {
+        height: auto;
+        padding-bottom: 15px;
+    }
+    .nav-recette ul li {
+        text-align: center;
+        float: none;
+        width: auto;
+        margin: 5px 0;
+    }
+    .partie-D,
+    .partie-G {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* vire les icones de la  nav */
+    .molecul-pink,
+    .gear img,
+    .flask-orange {
+        display: none;
+    }
+    .tech h2 {
+        float: none;
+        width: 100%;
+        text-align: center;
+        font-size: 70px;
+    }
+    .text_intro h3 {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+    .num_detail {
+        margin-right: 10px;
+    }
+}		
